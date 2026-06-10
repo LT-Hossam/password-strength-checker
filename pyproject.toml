@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "passguard"
+version = "1.0.0"
+description = "Offline password strength analysis plus a privacy-preserving breach check (standard library only)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []  # zero third-party dependencies by design
+
+[project.scripts]
+passguard = "passguard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["passguard*"]
